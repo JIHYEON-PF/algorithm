@@ -1,10 +1,8 @@
+package solved;
+
 import java.io.*;
 
 public class bj_24416_java {
-
-}
-
-class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -12,7 +10,7 @@ class Main {
 
         int n = Integer.parseInt(br.readLine());
 
-        bw.write(fib(n).toString() + " " + fibonacci(n));
+        bw.write(fib(n) + " " + fibonacci(n));
 
         bw.flush();
         bw.close();
