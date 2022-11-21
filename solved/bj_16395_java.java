@@ -1,3 +1,5 @@
+package solved;
+
 import java.io.*;
 
 public class bj_16395_java {
@@ -12,7 +14,6 @@ public class bj_16395_java {
         int k = Integer.parseInt(input[1]);
         int[][] arr = new int[n][n];
 
-        int result = 0;
 
         upto:for (int i = 0 ; i < n ; i++) {
             for (int j = 0 ; j <= i ; j++) {
@@ -23,12 +24,11 @@ public class bj_16395_java {
                 }
 
                 if (i == n-1 && j == k-1) {
-                    result = arr[i][j];
+                    bw.write(String.valueOf(arr[i][j]));
                     break upto;
                 }
             }
         }
-        bw.write(String.valueOf(result));
         bw.flush();
         bw.close();
         br.close();
