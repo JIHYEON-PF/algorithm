@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.Set;
+import java.util.HashSet;
 
 class Main {
     
@@ -7,21 +9,13 @@ class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int[] arr = new int[42];
-        int result = 0;
+        Set<Integer> result = new HashSet<>();
         
         for (int i = 0 ; i < 10 ; i++) {
-            int remainder = Integer.parseInt(br.readLine()) % 42;
-            arr[remainder] = 1;
+            result.add(Integer.parseInt(br.readLine()) % 42);
         }
         
-        for (int i : arr) {
-            if (i == 1) {
-                ++result;
-            }
-        }
-        
-        bw.write(String.valueOf(result));
+        bw.write(String.valueOf(result.size()));
         bw.flush();
         bw.close();
         br.close();
